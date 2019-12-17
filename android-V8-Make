@@ -1,0 +1,30 @@
+class Animal {   constructor(name) {     this.name = name;   }
+} 
+class Cat extends Animal {   likesBaths = false;   meow() {     console.log('Meow!');   }
+}     
+const lf = new Intl.ListFormat('en');
+lf.format(['Frank']);
+// → 'Frank'
+lf.format(['Frank', 'Christine']);
+// → 'Frank and Christine'
+lf.format(['Frank', 'Christine', 'Flora']);
+// → 'Frank, Christine, and Flora'
+lf.format(['Frank', 'Christine', 'Flora', 'Harrison']);
+// → 'Frank, Christine, Flora, and Harrison'   
+// Old behavior:
+JSON.stringify('\uD800');
+// → '"�"' 
+// New behavior:
+JSON.stringify('\uD800');
+// → '"\\ud800"'         
+myexport * as utils from './utils.mjs';        
+import * as utils from './utils.mjs';          
+// Old behavior:
+JSON.stringify('\uD800');
+// → '"�"' 
+// New behavior:
+JSON.stringify('\uD800');
+// → '"\\ud800"'        
+export * as utils from './utils.mjs';     
+import * as utils from './utils.mjs';
+export { utils };
